@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% block note %}
+<form action="{{url_for('note')}}" method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.nom.label }} {{ form.nom() }}<br>
+    {{ form.notem.label }} {{ form.notem() }}<br>
+    {{ form.notei.label }} {{ form.notei() }}<br>
+    {{ form.submit() }}
+</form>
+{% endblock%}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block edit %}
+<button class="new" onclick="window.location = '{{ url_for('note') }}'">new</button>
+<div class="edit0">
+    <div>noms</div>
+    <div>maths</div>
+    <div>info</div>
+    <div>del</div>
+    <div>edit</div>
+</div><br>
+{% for us in ress %}
+
+<div class="edit">
+    <div>{{us.nom}}</div>
+    <div>{{us.notem}}</div>
+    <div>{{us.notei}}</div>
+    <a href="del/{{us.nom}}"><img src="/static/images/del.png" width="20px"></a>
+    <a href="edit0/{{us.nom}}"><img src="/static/images/edit.png" width="20px"></a>
+</div><br>
+{% endfor %}
+
+
+
+{% endblock %}
